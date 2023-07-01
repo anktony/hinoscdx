@@ -1,5 +1,5 @@
 function carregarMusicas() {
-    fetch('musicas.json')
+    fetch('./Json/musicas.json')
         .then(response => response.json())
         .then(data => exibirMusicas(data))
         .catch(error => console.error('Ocorreu um erro ao carregar as músicas:', error));
