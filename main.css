@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.musica {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.titulo-tom {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.recebido-por {
+    margin-bottom: 10px;
+}
+
+.letra {
+    white-space: pre-wrap;
+    font-size: 16px;
+}
