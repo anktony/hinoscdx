@@ -24,7 +24,8 @@ function exibirMusicas(musicas) {
         testaudio.loop = true;
         testaudio.preload = "auto";
         testaudio.textContent = "This is the text inside the paragraph.";
-
+        testaudio.style.width = "300px";
+        testaudio.style.height = "50px";
         // const recebidoPor = document.createElement('div');
         // recebidoPor.classList.add('recebido-por');
         // recebidoPor.textContent = 'Recebido por: ' + musica['Recebido por'];
