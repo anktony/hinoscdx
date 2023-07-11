@@ -14,7 +14,7 @@ function exibirMusicas(musicas) {
 
         const tituloTom = document.createElement('div');
         tituloTom.classList.add('titulo-tom');
-        tituloTom.textContent = `${musica.id}. ${musica.Titulo} - Tom: ${musica.Tom}`;
+        tituloTom.textContent = `${musica.id}. ${musica.Titulo}` // - Tom: ${musica.Tom}`;
         divMusica.appendChild(tituloTom);
 
         const testaudio = document.createElement('audio');
@@ -33,8 +33,9 @@ function exibirMusicas(musicas) {
         const letra = document.createElement('div');
         letra.classList.add('letra');
         letra.textContent = musica.Letra;
-        divMusica.appendChild(letra);
         divMusica.appendChild(testaudio);
+        divMusica.appendChild(letra);
+        
 
         musicasContainer.appendChild(divMusica);
     });
