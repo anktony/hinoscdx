@@ -17,6 +17,13 @@ function exibirMusicas(musicas) {
         tituloTom.textContent = `${musica.id}. ${musica.Titulo} - Tom: ${musica.Tom}`;
         divMusica.appendChild(tituloTom);
 
+        const testaudio = document.createElement('audio');
+        testaudio.src = `./audios/hinosepontos/${musica.id}.mp3`
+        testaudio.controls = true;
+        testaudio.autoplay = false;
+        testaudio.loop = true;
+        testaudio.preload = "auto"; 
+
         // const recebidoPor = document.createElement('div');
         // recebidoPor.classList.add('recebido-por');
         // recebidoPor.textContent = 'Recebido por: ' + musica['Recebido por'];
@@ -26,6 +33,7 @@ function exibirMusicas(musicas) {
         letra.classList.add('letra');
         letra.textContent = musica.Letra;
         divMusica.appendChild(letra);
+        divMusica.appendChild(testaudio);
 
         musicasContainer.appendChild(divMusica);
     });
