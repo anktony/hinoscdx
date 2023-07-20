@@ -14,7 +14,7 @@ function exibirMusicas(musicas) {
 
         const tituloTom = document.createElement('div');
         tituloTom.classList.add('titulo-tom');
-        tituloTom.textContent = `${musica.id}. ${musica.Titulo}`// - Tom: ${musica.Tom}`;
+        tituloTom.textContent = `${musica.id}. ${musica.Titulo} - Tom: ${musica.Tom}`;
         divMusica.appendChild(tituloTom);
 
         const testaudio = document.createElement('audio');
