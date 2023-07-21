@@ -1,8 +1,14 @@
+*{
+    /* border: 1px solid red; */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     text-align: center;
+    
+    
 }
 
 h1 {
@@ -11,9 +17,16 @@ h1 {
 
 span{margin-left: 5vw; margin-right: 5vw;}
 
+.musicas{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .musica {
     margin-bottom: 40px;
-    text-align: left;
+    
+    
 }
 
 .titulo-tom {
@@ -29,4 +42,9 @@ span{margin-left: 5vw; margin-right: 5vw;}
 .letra {
     white-space: pre-wrap;
     font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:left;
+    width: max-content;
+    
 }
