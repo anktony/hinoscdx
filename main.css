@@ -1,81 +1,66 @@
 * {
-    box-sizing: border-box;
     border: 1px solid red;
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 10px; /* Reduzindo o padding para melhorar a visualização em dispositivos móveis */
     text-align: center;
-}
-
-h1 {
+  }
+  
+  h1 {
     margin-bottom: 20px;
-}
-
-span {
+  }
+  
+  span {
     margin-left: 5vw;
     margin-right: 5vw;
-}
-
-.musicas {
-    width: 50%;
+  }
+  
+  .musicas {
+    width: 70%; /* Aumentando a largura para se ajustar melhor em telas maiores */
+    max-width: 800px; /* Definindo um máximo para evitar que o conteúdo se estenda muito em telas grandes */
     margin-left: auto;
     margin-right: auto;
-}
-
-.musica {
-    margin-bottom: 40px; 
-}
-
-.titulo-tom {
+  }
+  
+  .musica {
+    margin-bottom: 40px;
+  }
+  
+  .titulo-tom {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.recebido-por {
+  }
+  
+  .recebido-por {
     margin-bottom: 10px;
-}
-
-.letra {
+  }
+  
+  .letra {
     white-space: pre-wrap;
-    font-size: 16px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 18px; /* Aumentando o tamanho da fonte para melhorar a legibilidade */
     text-align: left;
-    width: max-content;
-}
-
-/* Media query para telas menores que 272px */
-@media (max-width: 400px) {
-    body {
-        padding: 5px;
-    }
-
+    max-width: 100%; /* O texto ocupará a largura máxima disponível */
+    margin: 0; /* Removendo as margens laterais para ocupar toda a largura */
+  }
+  
+  @media (max-width: 480px) {
+    /* Ajustes para telas menores (por exemplo, dispositivos móveis) */
     .musicas {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+      width: 90%; /* Aumentando a largura para preencher mais a tela em dispositivos móveis */
+      max-width: 100%; /* Permitindo que ocupe a largura total da tela */
     }
-
-    .musica{
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .letra {
-        font-size: 12px;
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
- 
-
+  
     audio {
-        width: 100%;
+      width: 100%; /* O áudio ocupará a largura total da tela em dispositivos móveis */
     }
-}
+  
+    body {
+      font-size: 14px; /* Ajustando o tamanho da fonte para melhor legibilidade em telas menores */
+      padding: 5px; /* Reduzindo o padding para melhor aproveitamento do espaço em telas menores */
+    }
+  }
+  
