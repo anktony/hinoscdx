@@ -51,6 +51,8 @@ span{margin-left: 5vw; margin-right: 5vw;}
    {
     font-size: 12px;
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
    }
 
    .musicas{
