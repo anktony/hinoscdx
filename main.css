@@ -49,7 +49,7 @@ span {
 }
 
 /* Media query para telas menores que 272px */
-@media (max-width: 272px) {
+@media (max-width: 400px) {
     body {
         padding: 5px;
     }
