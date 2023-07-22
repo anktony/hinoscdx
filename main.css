@@ -1,14 +1,12 @@
-/* *{
+*{
     border: 1px solid red;
-} */
+}
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     text-align: center;
-    
-    
 }
 
 h1 {
@@ -24,9 +22,7 @@ span{margin-left: 5vw; margin-right: 5vw;}
 }
 
 .musica {
-    margin-bottom: 40px;
-    
-    
+    margin-bottom: 40px; 
 }
 
 .titulo-tom {
@@ -47,4 +43,30 @@ span{margin-left: 5vw; margin-right: 5vw;}
     text-align:left;
     width: max-content;
     
+}
+
+@media (max-width:272px)
+{
+  .letra
+   {
+    font-size: 12px;
+    width: 100%;
+   }
+
+   .musicas{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    audio {
+        width: 500px;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+    }
 }
