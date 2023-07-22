@@ -48,7 +48,7 @@ span {
 }
 
 /* Media query para telas menores que 272px */
-@media (max-width: 272px) {
+/* @media (max-width: 272px) {
     body {
         padding: 5px;
     }
@@ -67,4 +67,4 @@ span {
     audio {
         width: 100%;
     }
-}
+} */
