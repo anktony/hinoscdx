@@ -21,8 +21,8 @@
   .musicas {
     width: 70%; /* Aumentando a largura para se ajustar melhor em telas maiores */
     max-width: 800px; /* Definindo um máximo para evitar que o conteúdo se estenda muito em telas grandes */
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
   }
   
   .musica {
@@ -49,6 +49,12 @@
   
   @media (max-width: 480px) {
     /* Ajustes para telas menores (por exemplo, dispositivos móveis) */
+
+    span {
+        margin-left: 5vw;
+        margin-right: 5vw;
+      }
+      
     .musicas {
       width: 90%; /* Aumentando a largura para preencher mais a tela em dispositivos móveis */
       max-width: 100%; /* Permitindo que ocupe a largura total da tela */
