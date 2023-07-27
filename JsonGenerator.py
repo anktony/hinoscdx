@@ -1,7 +1,7 @@
 import json
 
-fileList =["musicas.json", "trezena_StAntonio_2023.json"]
-workFile = fileList[0]
+fileList =["musicas.json", "trezena_StAntonio_2023.json", "pontosdenana.json"]
+workFile = fileList[2]
 
 def adicionar_musica(letra, titulo, recebido_por, tom):
     musica = {

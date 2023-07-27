@@ -1,6 +1,6 @@
-*{
+/* *{
     border: 1px solid red;
-}
+} */
 
 body {
     font-family: Arial, sans-serif;
@@ -45,7 +45,7 @@ span{margin-left: 5vw; margin-right: 5vw;}
     
 }
 
-@media (max-width:272px)
+@media (min-width:272px)
 {
   .letra
    {
@@ -65,7 +65,7 @@ span{margin-left: 5vw; margin-right: 5vw;}
 
     body {
         font-family: Arial, sans-serif;
-        margin: 0;
+        margin: 20px;
         padding: 5px;
         text-align: center;
     }

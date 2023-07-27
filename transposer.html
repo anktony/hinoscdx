@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chord Transposer</title>
+</head>
+<body>
+  <h1>Chord Transposer</h1>
+  <label for="chordsInput">Enter chords (separated by spaces):</label><br>
+  <input type="text" id="chordsInput"><br>
+  <label for="transposeAmount">Transpose by how many semitones:</label><br>
+  <input type="number" id="transposeAmount" value="0"><br>
+  <button onclick="transposeChords()">Transpose</button><br>
+  <p id="transposedChords"></p>
+
+  <script>
+    function transposeChords() {
+      const chordsInput = document.getElementById('chordsInput').value;
+      const transposeAmount = parseInt(document.getElementById('transposeAmount').value, 10);
+      const chords = chordsInput.trim().split(/\s+/);
+
+      if (chordsInput === '') {
+        alert('Please enter chords before transposing.');
+        return;
+      }
+
+      if (isNaN(transposeAmount)) {
+        alert('Please enter a valid number of semitones to transpose.');
+        return;
+      }
+
+      const transposedChords = chords.map(chord => transposeChord(chord, transposeAmount));
+      document.getElementById('transposedChords').innerText = 'Transposed Chords: ' + transposedChords.join(' ');
+    }
+
+    function transposeChord(chord, semitones) {
+      const notes = ['A', 'Bb', 'B', 'C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab'];
+      const regex = /^([A-Ga-g#]+)(.*)$/;
+      const [, baseNote, modifiers] = chord.match(regex);
+      const originalNoteIndex = notes.indexOf(baseNote.toUpperCase());
+
+      if (originalNoteIndex === -1) {
+        return chord; // Return unchanged if the chord doesn't match a valid note.
+      }
+
+      const transposedNoteIndex = (originalNoteIndex + semitones) % notes.length;
+      const transposedBaseNote = notes[transposedNoteIndex];
+      const transposedChord = transposedBaseNote + modifiers;
+      return transposedChord;
+    }
+  </script>
+</body>
+</html>
