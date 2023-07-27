@@ -1,8 +1,8 @@
-/* *{
+/* * {
     border: 1px solid red;
-} */
-
-body {
+  } */
+  
+  body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 10px; /* Reduzindo o padding para melhorar a visualização em dispositivos móveis */
@@ -41,26 +41,17 @@ body {
   
   .letra {
     white-space: pre-wrap;
-    font-size: 16px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align:left;
-    width: max-content;
-    
-}
-
-@media (max-width:272px)
-{
-  .letra
-   {
-    font-size: 12px;
-    width: 100%;
-   }
-
-   .musicas{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 18px; /* Aumentando o tamanho da fonte para melhorar a legibilidade */
+    text-align: left;
+    max-width: 100%; /* O texto ocupará a largura máxima disponível */
+    margin: 0; /* Removendo as margens laterais para ocupar toda a largura */
+  }
+  
+  @media (max-width: 480px) {
+    /* Ajustes para telas menores (por exemplo, dispositivos móveis) */
+    .musicas {
+      width: 90%; /* Aumentando a largura para preencher mais a tela em dispositivos móveis */
+      max-width: 100%; /* Permitindo que ocupe a largura total da tela */
     }
   
     audio {
@@ -68,9 +59,8 @@ body {
     }
   
     body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 5px;
-        text-align: center;
+      font-size: 14px; /* Ajustando o tamanho da fonte para melhor legibilidade em telas menores */
+      padding: 5px; /* Reduzindo o padding para melhor aproveitamento do espaço em telas menores */
     }
-}
+  }
+  
