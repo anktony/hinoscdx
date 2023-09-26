@@ -1,3 +1,9 @@
+const fs = require('fs');
+const path = require('path');
+
+let diretorioAudios = './audios/hinosdexango/'
+
+
 function carregarMusicas() {
     fetch('./Json/hinosdexango.json')
         .then(response => response.json())
@@ -14,11 +20,20 @@ function exibirMusicas(musicas) {
 
         const tituloTom = document.createElement('div');
         tituloTom.classList.add('titulo-tom');
-        tituloTom.textContent = `${musica.id}. ${musica.Titulo} - Tom: ${musica.Tom}`;
+        tituloTom.textContent = `${musica.id + 1}. ${musica.Titulo} - Tom: ${musica.Tom}`;
         divMusica.appendChild(tituloTom);
 
         const testaudio = document.createElement('audio');
-        testaudio.src = `./audios/hinosdexango/${musica.id}.mp3`
+
+        fs.readdirSync(diretorioAudios).forEach(nomeArquivo => {
+            if (nomeArquivo.slice(0, 2) === musica.id) {
+              testaudio.src = path.join(diretorioAudios, nomeArquivo);
+              console.log(`O arquivo ${nomeArquivo} atende ao critério. Caminho: ${testaudio.src}`);
+            }
+          });
+
+        // testaudio.src = `./audios/hinosdexango/${musica.id}.mp3`
+
         testaudio.controls = true;
         testaudio.autoplay = false;
         testaudio.loop = true;
