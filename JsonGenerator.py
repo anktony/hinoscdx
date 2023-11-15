@@ -1,7 +1,7 @@
 import json
 
-fileList =["musicas.json", "trezena_StAntonio_2023.json", "pontosdenana.json"]
-workFile = fileList[2]
+fileList =["musicas.json", "trezena_StAntonio_2023.json", "pontosdenana.json", "hinosdexango.json"]
+workFile = fileList[3]
 
 def adicionar_musica(letra, titulo, recebido_por, tom):
     musica = {
@@ -14,7 +14,7 @@ def adicionar_musica(letra, titulo, recebido_por, tom):
 
     musicas.append(musica)
 
-    with open("./json/"+workFile, "w", encoding="utf-8") as arquivo:
+    with open("./Json/"+workFile, "w", encoding="utf-8") as arquivo:
         json.dump(musicas, arquivo, ensure_ascii=False, indent=4)
 
     print(f"A música '{titulo}' foi adicionada ao arquivo '{workFile}' com sucesso!")
@@ -43,7 +43,7 @@ def main():
 
 if __name__ == "__main__":
     try:
-        with open("./json/"+workFile, "r", encoding="utf-8") as arquivo:
+        with open("./Json/"+workFile, "r", encoding="utf-8") as arquivo:
             musicas = json.load(arquivo)
     except FileNotFoundError:
         musicas = []
